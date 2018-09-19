@@ -18,13 +18,12 @@ T2 = T1*(r^(gamma-1));
 %% State 3a
 Qin1_overMa = cv_percent/100 /AFR *Q_LHV;
 T3a = Qin1_overMa/Cv+T2;
-P3a = P2*T2*T3a;
+P3a = P2/T2*T3a;
 V3a = V2;
 
 %% State 3b
 Qin2_overMa = (100-cv_percent)/100 /AFR *Q_LHV;
 T3b = Qin2_overMa/Cp+T3a;
-%P3b = P3a;
 V3b = V3a/T3a*T3b;
 
 %% Efficiency Equation
